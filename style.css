@@ -1,0 +1,284 @@
+@font-face {
+    font-family: "Aloe";
+    src: url("Aloevera.ttf");
+  }
+
+body{
+    text-align: center;
+    margin: 0;
+    background-image: url("DenverCityTransparent.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow:hidden;
+    height: 100vh;
+}
+#data1{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 60px;
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-bottom: 20px;
+    align-items: center;
+    }
+#cityName {
+    font-size: 45px;  
+    font-family:'Aloe';
+}
+#cTime {
+    margin-top: -25px;
+    font-size: 30px;
+    font-family:'Aloe';
+}
+
+
+#visual h3 {
+    font-size: 35px;
+    font-family:'Aloe';
+}
+
+#visual img {
+    width: 50px;
+    height: 50px;
+}
+
+#visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    /* text-align: right; */
+}
+
+#description {
+    font-family:'Aloe';
+    margin-top: -20px;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    margin-left: 35px;
+}
+
+#data2{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 15px;
+margin-left: 120px;
+margin-right: 120px;
+margin-bottom: 80px;
+}
+
+.d2card {
+background: rgba(237, 237, 242, 0.723);
+border-radius: 10px;
+border: 1px solid rgb(19, 19, 19);
+}
+
+.wTitle {
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#humidity, #windSpeed, #feelsLike {
+    font-size: 25px;
+}
+
+#data3{
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-top: -25px;
+    background: rgba(237, 237, 242, 0.723);
+    border-radius: 10px;
+    border: 1px solid rgb(19, 19, 19);
+}
+
+#d3c2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-family: 'Courier New', Courier, monospace;
+   
+}
+
+#tomTitle {
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    font-family:'Aloe';
+}
+
+@media (max-width: 935px) {
+    #description {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 820px) {
+    #data1{
+        gap: 5px;
+    }
+}
+
+@media (max-width: 800px) {
+    #data1{
+        /* grid-template-columns: 2fr .5fr 1fr;*/
+        grid-template-columns: 1.5fr .5fr 1fr; 
+    }
+
+    #cityName {
+        font-size: 35px;
+    }
+
+    #visual h3 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 730px) {
+    #data1{
+        grid-template-columns: 2fr .5fr 1.5fr;
+        gap: 5px;
+        margin-left: 110px;
+        margin-right: 110px;
+    }
+
+    #data2{
+        margin-left: 110px;
+        margin-right: 110px;
+    }
+
+    #data3{
+        margin-left: 110px;
+        margin-right: 110px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    #data1{
+        /* grid-template-columns: 1.5fr 1fr 1fr; */
+        margin-top: 40px;
+        margin-left: 90px;
+        margin-right: 90px;
+        margin-bottom: 20px;
+        }
+
+    #data2{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 15px;
+        margin-left: 90px;
+        margin-right: 90px;
+        margin-bottom: 60px;
+        }
+   
+    #d3c2 {
+        gap: 25px;
+   }
+
+   #tomTitle {
+    font-size: 35px;
+    }
+
+   #data3{
+    margin-left: 90px;
+    margin-right: 90px;
+    padding-left: 10px;
+    padding-right: 10px;
+   }
+}
+
+@media (max-width: 620px) {
+
+    #data1{
+        /* grid-template-columns: 1.5fr 1fr 1fr; */
+        /* margin-top: 40px; */
+        margin-left: 80px;
+        margin-right: 80px;
+        /* margin-bottom: 20px; */
+        }
+
+    #data2{
+        /* gap: 15px; */
+        margin-left: 80px;
+        margin-right: 80px;
+        /* margin-bottom: 60px; */
+        }
+   
+    #d3c2 {
+        gap: 30px;
+   }
+
+   #data3{
+    margin-left: 80px;
+    margin-right: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#tomTitle {
+    font-size: 30px;
+    }
+}
+
+@media (max-width: 595px) {
+    #cityName {
+        font-size: 30px;
+    }
+
+    #cTime {
+        font-size: 25px;
+    }
+
+    #visual h3 {
+        font-size: 25px;
+    }
+
+    #description {
+        font-size: 20px;
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    #data1{
+        grid-template-columns:1fr 1fr;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        min-width: 320px;
+        }
+      #blankdiv{
+          display: none;
+      }
+
+      #data2{
+        margin-left: 20px;
+        margin-right: 20px;
+        }
+        .wTitle {
+            font-size: 15px;
+        }
+        
+        #humidity, #windSpeed, #feelsLike {
+            font-size: 15px;
+        }
+
+    #d3c2 {
+        grid-template-columns: 1fr;
+        min-width: 175px;
+    }
+
+    #data3{ 
+        min-width: 175px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 460px) {
+    #data1{
+        grid-template-columns:1fr;
+        min-width: 200px;
+        }
+}

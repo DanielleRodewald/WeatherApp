@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js"></script>
+    <link href='style.css' rel='stylesheet' />
+    <title>WeatherApp</title>
+</head>
+
+<body>
+
+    <div id="data1">
+        <div id="d1c1">
+            <h3 id="cityName"></h3>
+            <h3 id="cTime"></h3>
+        </div>
+        <div id="blankdiv">
+
+        </div>
+
+        <div id="d1c2">
+            <div id="visual">
+                <img id="weatherIcon">
+                <h3 id="mainTemp"></h3>
+            </div>
+            <h3 id="description"></h3>
+        </div>
+
+
+    </div>
+
+    <br>
+    <br>
+    <div id="data2">
+        <div class="d2card">
+            <h3 class="wTitle">Feels like</h3>
+            <h3 id="feelsLike"></h3>
+        </div>
+        <div class="d2card">
+            <h3 class="wTitle">Wind speed</h3>
+            <h3 id="windSpeed"></h3>
+        </div>
+        <div class="d2card">
+            <h3 class="wTitle">Humidity</h3>
+            <h3 id="humidity"></h3>
+        </div>
+    </div>
+
+    <h3 id="tomTitle">Tomorrow</h3>
+    <div id="data3">
+        <div id="d3c2">
+            <div>
+                <h3>Morning</h3>
+                <p id="morning"></p>
+            </div>
+            <div>
+                <h3>Afternoon</h3>
+                <p id="afternoon"></p>
+            </div>
+            <div>
+                <h3>Evening</h3>
+                <p id="evening"></p>
+            </div>
+        </div>
+    </div>
+    <script src="app.js" defer>
+    </script>
+
+</body>
+
+</html>
