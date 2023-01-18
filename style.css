@@ -9,12 +9,84 @@ body{
     background-image: url("DenverCityTransparent.png");
     background-size: cover;
     background-repeat: no-repeat;
-    overflow:hidden;
-    height: 100vh;
+    overflow:scroll;
+    
+    height: 140vh;
 }
+
+/* Nav bar */
+
+nav { 
+    width: 100%; 
+    position: fixed; 
+    z-index: 999;
+    background-image: url(range.png); 
+    background-size:cover ;
+    height: 75px;
+}
+
+.menu {
+    text-align: left;
+    font-weight: 900;
+    font-size: 40px;
+    color: rgb(255, 87, 87);
+    text-shadow: 2px 2px rgb(0, 0, 0);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.menu2{
+    color: rgb(255, 87, 87);
+    text-shadow: 1px 1px rgb(0, 0, 0);
+font-size: 30px;
+font-weight: bold;
+letter-spacing: 1vh;
+}
+
+ul li {
+    list-style-type: none; 
+    text-align: left;
+    /* float:left; 
+    overflow: visible; */
+}
+
+
+li .dropdown {
+    visibility: hidden; 
+    width: 180px; 
+    height: 25px; 
+    line-height: 20px; 
+    margin-right:0px;
+}
+
+li:hover .dropdown {
+    visibility: visible; 
+    display: block;
+}
+
+
+nav a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 0px;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 2px;
+  border: 4px double rgb(255, 87, 87);;   
+  width: 150px; 
+  color: black; 
+  background-color:white; 
+  text-align: center; 
+}
+
+nav a:hover {
+  color: rgba(57, 6, 243, 0.979);
+  font-weight: 800;
+  transform:scale(1.1,1.1);
+}
+/* Nav bar end */
+
 #data1{
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
     margin-top: 60px;
     margin-left: 120px;
@@ -22,6 +94,18 @@ body{
     margin-bottom: 20px;
     align-items: center;
     }
+/* 
+#blankdiv{
+max-width: 250px;
+max-height: 250px;
+overflow:auto;
+border: 3px black solid;
+text-align: center;
+margin: 0 auto;
+}    */
+
+
+
 #cityName {
     font-size: 45px;  
     font-family:'Aloe';
@@ -76,12 +160,12 @@ border: 1px solid rgb(19, 19, 19);
 }
 
 .wTitle {
-    font-size: 18px;
+    font-size: 22px;
     font-family: 'Courier New', Courier, monospace;
 }
 
 #humidity, #windSpeed, #feelsLike {
-    font-size: 25px;
+    font-size: 35px;
 }
 
 #data3{
@@ -97,7 +181,6 @@ border: 1px solid rgb(19, 19, 19);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     font-family: 'Courier New', Courier, monospace;
-   
 }
 
 #tomTitle {
@@ -105,8 +188,18 @@ border: 1px solid rgb(19, 19, 19);
     font-family: 'Courier New', Courier, monospace;
     font-family:'Aloe';
 }
+#d3c2 h3 {
+    font-size: 22px;
+}
+#morning, #afternoon, #evening {
+    font-size: 20px; 
+}
 
 @media (max-width: 935px) {
+    body {
+        height: 110vh;
+    }
+
     #description {
         margin-left: 0px;
     }
@@ -119,6 +212,16 @@ border: 1px solid rgb(19, 19, 19);
 }
 
 @media (max-width: 800px) {
+   
+
+    .wTitle {
+        font-size: 20px;
+    }
+    
+    #humidity, #windSpeed, #feelsLike {
+        font-size: 28px;
+    }
+
     #data1{
         /* grid-template-columns: 2fr .5fr 1fr;*/
         grid-template-columns: 1.5fr .5fr 1fr; 
@@ -130,6 +233,13 @@ border: 1px solid rgb(19, 19, 19);
 
     #visual h3 {
         font-size: 30px;
+    }
+
+    #morning, #afternoon, #evening {
+        max-width: 120px; 
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 15px;
     }
 }
 
@@ -237,17 +347,42 @@ border: 1px solid rgb(19, 19, 19);
         font-size: 20px;
         margin-left: 0px;
     }
+    #data2{
+        min-width: 412px;
+       }
+
+    #data3{
+     min-width: 390px;
+    }
 }
+
+@media (max-width: 565px) {
+    #data2{
+        margin-left: 50px;
+        margin-right: 50px;
+        }
+
+    #data3{
+        margin-left: 50px;
+        margin-right: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
 
 @media (max-width: 500px) {
 
-    #data1{
+    body{
+        height: 160vh;
+        }
+     #data1{
         grid-template-columns:1fr 1fr;
         margin-left: 20px;
         margin-right: 20px;
         margin-bottom: 10px;
         min-width: 320px;
-        }
+      }
       #blankdiv{
           display: none;
       }
@@ -257,12 +392,18 @@ border: 1px solid rgb(19, 19, 19);
         margin-right: 20px;
         }
         .wTitle {
-            font-size: 15px;
+            font-size: 18px;
         }
         
         #humidity, #windSpeed, #feelsLike {
-            font-size: 15px;
+            font-size: 22px;
         }
+    
+    .d2card {
+        padding-left: 2px;
+        padding-right: 2px;
+        align-items: center;
+    } 
 
     #d3c2 {
         grid-template-columns: 1fr;
@@ -273,12 +414,68 @@ border: 1px solid rgb(19, 19, 19);
         min-width: 175px;
         margin-left: 20px;
         margin-right: 20px;
+        padding-bottom: 15px;
     }
+
+    #morning, #afternoon, #evening {
+        max-width: 250px;
+    } 
 }
 
 @media (max-width: 460px) {
+
+    body{
+    overflow:scroll;
+    height: 180vh;
+    }
+    #cityName {
+        font-size: 40px;
+    }
+
+    #cTime {
+        font-size: 25px;
+    }
+
+    #visual h3 {
+        font-size: 35px;
+    }
+
+    #description {
+        font-size: 25px;
+        margin-left: 0px;
+    }
     #data1{
         grid-template-columns:1fr;
         min-width: 200px;
         }
+
+    #data2{
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        min-width: 250px;
+        max-width: 0px;
+    }
+    #data3{
+        margin: 0 auto;
+        min-width: 250px;
+        max-width: 250px;
+    }
+    #d3c2 {
+        gap: 10px;
+   }
+
+   #d1c2{
+margin-top: -35px;
+margin-bottom: -25px;
+   }
+
+   #blankdiv{
+       display:none;
+   }
+
+   #tomTitle {
+    margin-top: 30px;
+    margin-bottom: 5px;
+    }
+
 }

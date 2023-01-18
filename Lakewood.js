@@ -2,7 +2,7 @@ const currentTime= new Date ();
 const time = document.getElementById("cTime");
 time.innerHTML= currentTime.toLocaleTimeString();
 
-const apiURL = "//api.openweathermap.org/data/2.5/weather?id=5419384&appid=6bb4a1786da54716a7c810b6da4e545e&units=imperial" //Zip search
+const apiURL = "//api.openweathermap.org/data/2.5/weather?id=5427946&appid=6bb4a1786da54716a7c810b6da4e545e&units=imperial" //Zip search
 fetch (apiURL)
 .then((response) => response.json())
 .then((weatherInfo)=> {
