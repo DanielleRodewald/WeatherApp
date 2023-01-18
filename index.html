@@ -5,21 +5,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js"></script>
+    <link href='style.css' rel='stylesheet' />
     <title>WeatherApp</title>
 </head>
 
 <body>
-    <img src="Map.png" usemap="#colorado">
-    <map id="colorado" name="colorado">
-        <area shape="circle" alt="Denver" coords="280,250,15" href="Denver.html">
-        <area shape="circle" alt="Aurora" coords="575,280,15" href="Aurora.html">
-        <area shape="circle" alt="Lakewood" coords="120,330,15" href="Lakewood.html">
-        <area shape="circle" alt="Englewood" coords="290,470,15" href="Englewood.html">
-        <area shape="circle" alt="Littleton" coords="240,550,15" href="Littleton.html">
-        <area shape="circle" alt="Centennial" coords="495,630,15" href="Centennial.html">
-        <area shape="circle" alt="Arvada" coords="110,105,15" href="Arvada.html">
-        <area shape="circle" alt="Westminster" coords="200,25,15" href="Westminster.html">
-    </map>
+    <nav>
+      <ul>
+                    <li> <span class="menu">☰ <span class="menu2">Cities</span></span> 
+                        <div class="dropdown">
+                            <ul>
+                                <li><a href="Arvada.html">Arvada</a></li>
+                                <li><a href="Aurora.html">Aurora</a></li>
+                                <li><a href="Centennial.html">Centennial</a></li>
+                                <li><a href="index.html">Denver</a></li>
+                                <li><a href="Englewood.html">Englewood</a></li>
+                                <li><a href="Lakewood.html">Lakewood</a></li>
+                                <li> <a href="Littleton.html">Littleton</a>  </li>
+                                <li><a href="Westminster.html">Westminster</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>  
+    </nav>
+    <br>
+
+    <div id="data1">
+        <div id="d1c1">
+            <h3 id="cityName"></h3>
+            <h3 id="cTime"></h3>
+        </div>
+        <div id="blankdiv">
+
+        </div>
+
+        <div id="d1c2">
+            <div id="visual">
+                <img id="weatherIcon">
+                <h3 id="mainTemp"></h3>
+            </div>
+            <h3 id="description"></h3>
+        </div>
+
+
+    </div>
+
+    <br>
+    <br>
+    <div id="data2">
+        <div class="d2card">
+            <h3 class="wTitle">Feels like</h3>
+            <h3 id="feelsLike"></h3>
+        </div>
+        <div class="d2card">
+            <h3 class="wTitle">Wind speed</h3>
+            <h3 id="windSpeed"></h3>
+        </div>
+        <div class="d2card">
+            <h3 class="wTitle">Humidity</h3>
+            <h3 id="humidity"></h3>
+        </div>
+    </div>
+
+    <h3 id="tomTitle">Tomorrow</h3>
+    <div id="data3">
+        <div id="d3c2">
+            <div>
+                <h3>Morning</h3>
+                <p id="morning"></p>
+            </div>
+            <div>
+                <h3>Afternoon</h3>
+                <p id="afternoon"></p>
+            </div>
+            <div>
+                <h3>Evening</h3>
+                <p id="evening"></p>
+            </div>
+        </div>
+    </div>
+    <script src="denverapp.js" defer>
+    </script>
+
 </body>
 
 </html>
